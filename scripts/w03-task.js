@@ -100,6 +100,6 @@ let multiplyArray = array.map((number) => number *2);
 document.querySelector("#multiplied").textContent = multiplyArray;
 
 /* Output Sum of Multiplied by 2 Array */
-let multiplySumArray = multiplyArray.reduce((firstNumber, secondNumber) => firstNumber + secondNumber);
+let multiplySumArray = array.map((number) => number *2).reduce((firstNumber, secondNumber) => firstNumber + secondNumber);
 
 document.querySelector("#sumOfMultiplied").textContent = multiplySumArray;
