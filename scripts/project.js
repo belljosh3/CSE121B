@@ -3,7 +3,12 @@ const subscriberElement = document.getElementById("subs");
 let subList = [];
 
 
-// async getSubs Function using fetch()
+//make sure old sub pool is cleared
+function reset() {
+    subscriberElement.innerHTML = "";
+}
+
+//async getSubs Function using fetch() to get list of subs
 async function getSubs() {
     reset();
 
@@ -44,13 +49,6 @@ function displaySubs(subList) {
     });
 }
 
-
-//make sure old sub pool is cleared
-function reset() {
-    subscriberElement.innerHTML = "";
-}
-
-
 // function to filter subscribers based on status
 function filterSubs(subscriber) {
     reset();
@@ -74,7 +72,6 @@ function filterSubs(subscriber) {
             break;
     }
 }
-
 
 // Event Listeners for when things get pressed
 document.getElementById("newSub").addEventListener("click", () => getSubs())
