@@ -7,7 +7,7 @@ let subList = [];
 async function getSubs() {
     reset();
 
-    const response = await fetch("https://random-data-api.com/api/v2/users?size=10&response_type=json");
+    const response = await fetch("https://random-data-api.com/api/v2/users?size=12&response_type=json");
     if (response.ok) {
         subList = await response.json();
         displaySubs(subList);
@@ -19,7 +19,7 @@ function displaySubs(subList) {
     subList.forEach(subscriber => {
         let article = document.createElement("article");
         
-        let header = document.createElement("h3");
+        let header = document.createElement("h2");
         header.textContent = `${subscriber.id} - ${subscriber.last_name}, ${subscriber.first_name}`;
 
         let image = document.createElement("img");
@@ -31,7 +31,7 @@ function displaySubs(subList) {
         let planStatus = document.createElement("li");
         planStatus.textContent = `Status: ${subscriber.subscription.status}`;
 
-        let phone = document.createElement("h3");
+        let phone = document.createElement("h4");
         phone.textContent = `Phone: ${subscriber.phone_number}`
 
         article.appendChild(header);

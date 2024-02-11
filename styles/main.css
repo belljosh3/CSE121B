@@ -286,6 +286,16 @@ footer {
     align-items: center;
 }
 
+#subs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 100px;
+    margin-left: 1rem;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
